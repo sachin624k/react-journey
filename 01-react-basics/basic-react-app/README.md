@@ -54,12 +54,10 @@ Understanding how files interact is key to mastering React.
 - **App.css**  
   Styles specific to the App component.
 
----
-
-### Render Flow Diagram
-
-```mermaid
+Render Flow Diagram
+```
 graph TD
+```
     A[index.html] --> B(main.jsx)
     B --> C[App.jsx]
     C --> D[Title Component]
