@@ -19,9 +19,7 @@ React is a **JavaScript library** used for creating User Interfaces (UI).
 
 
 - **The Core Idea:** React apps are built using **Components**.
-
 - **The Process:** We render (invoke) components to display the UI.
-
 - **Component Composition:** A component is a bundle of HTML, JavaScript, and CSS that acts as a reusable and independent piece of code.
 
 
@@ -39,9 +37,7 @@ React is a **JavaScript library** used for creating User Interfaces (UI).
 
 
 - **Not Real JavaScript:** Browsers cannot read JSX natively.
-
 - **The Transpiler:** A tool called **Babel** converts (transpiles) JSX into regular JavaScript.
-
 - **Conversion Flow:** `JSX → Babel → JavaScript`
 
 
@@ -87,25 +83,21 @@ Understanding how files interact is key to mastering React.
 
 
 - **index.html**  
-
   Entry point of the application. Contains `<div id="root"></div>`.
 
 
 
 - **main.jsx**  
-
   Bridge between React and HTML. Renders the `App` component into the root div.
 
 
 
 - **App.jsx**  
-
   Main component where high-level logic and layout live.
 
 
 
 - **App.css**  
-
   Styles specific to the App component.
 
 
@@ -153,43 +145,23 @@ Components help us break the UI into small, reusable pieces.
 
 
 ```javascript
-
 import "./App.css";
-
-
-
 // A small, reusable component
-
 function Title() {
-
   return <h1>I am Title</h1>;
-
 }
-
-
 
 // The main App component
-
 function App() {
-
   return (
-
     <div>
-
       <h2>Hello!</h2>
-
       <Title /> {/* Nesting the Title component */}
-
     </div>
-
   );
-
 }
 
-
-
 export default App;
-
 ```
 
 
@@ -210,38 +182,21 @@ export default App;
 
   A React component must return **one single root element**.
 
-
-
   ❌ **Incorrect**
-
   ```jsx
-
   return (
-
     <div>One</div>
-
     <div>Two</div>
-
   );
-
   ```
-
   ✅ **Correct**
-
   ```jsx
-
   return (
-
   <div>
-
     <div>One</div>
-
     <div>Two</div>
-
   </div>
-
   );
-
   ```
 
 
@@ -256,63 +211,40 @@ React uses **ES Modules** to share components between files.
 
 ### Default Export
 
-
-
 Used when a file exports **only one value**.
 
 
 
 ```js
-
 // Title.jsx
-
 export default Title;
-
 ```
-
 ```js
-
 // App.jsx
-
 import Title from "./Title.jsx";
-
 ```
-
 ✔ Can be imported with any name.
-
 
 
 ### Named Export
 
 
-
 Used when exporting multiple values from a file.
 
 ```js
-
 // Title.jsx
-
 export function Title() {}
-
 ```
-
 ```js
-
 import { Title } from "./Title.jsx";
-
 ```
-
 ✔ Name must match exactly.
 
 
 
 Summary
-
 - Default export → single value, flexible name
-
 - Named export → multiple values, fixed names
-
-
 
 Choose based on project structure and clarity.
 
@@ -332,27 +264,14 @@ JSX looks like HTML but follows JavaScript rules.
 
 **JSX Rules**
 
-
-
 **1.** Return a single root element
-
-
 
 **2.** Close all tags
 
-
-
-**3.** Use camelCase for attributes
-
+**3.** Use **camelCase** for attributes
 ```jsx
-
 <img className="photo" />
-
 ```
-
-
-
-
 
 **🐫 camelCase in JSX**
 
@@ -361,29 +280,17 @@ JSX attributes become JavaScript object keys, so they follow JavaScript naming r
 
 
 - JavaScript doesn’t allow dashes (-)
-
-
-
 - Some words like class are reserved
 
-
-
 **Examples**
-
 - class → className
-
-
-
 - stroke-width → strokeWidth
 
 
 
 ```jsx
-
 <div className="container"></div>
-
 ```
-
 👉 Rule: In JSX, use camelCase attribute names.
 
 
@@ -398,39 +305,21 @@ JSX attributes become JavaScript object keys, so they follow JavaScript naming r
 
 Fragments let you return multiple elements without adding extra DOM nodes.
 
-
-
 **❌ Without Fragment (extra div added)**
-
 ```jsx
-
 <div>
-
   <Title />
-
   <Title />
-
 </div>
-
 ```
-
 **✅ With Fragment (no extra DOM)**
-
 ```jsx
-
 <>
-
   <Title />
-
   <Title />
-
 </>
-
 ```
-
 ✔ Cleaner DOM
-
-
 
 ✔ Better performance
 
@@ -445,19 +334,12 @@ Fragments let you return multiple elements without adding extra DOM nodes.
 
 
 Curly braces allow you to write JavaScript inside JSX.
-
 ```js
-
 function Title() {
-
   let name = "Sachin";
-
   return <h1>Hello, {name.toUpperCase()}!</h1>;
-
 }
-
 ```
-
 ✔ {} treats content as a JavaScript expression.
 
 
@@ -501,19 +383,16 @@ src/
 
 
 - **Product.jsx**  
-
   Represents a single product UI (title, description, etc.)
 
 
 
 - **ProductTab.jsx**  
-
   Acts as a container that renders multiple `Product` components.
 
 
 
 - **App.jsx**  
-
   Root component that renders `ProductTab`.
 
 
@@ -567,14 +446,12 @@ src/
 
 
 - Styles related to a component live in its own CSS file.
-
 - CSS is imported **at the top of the component file**.
-
 - Use `className` instead of `class` in JSX.
 
 
 
-Example:
+**Example:**
 
 ```jsx
 
@@ -601,11 +478,8 @@ Each component should ideally live in its own separate file.
 This improves:
 
 
-
 - Readability
-
 - Reusability
-
 - Maintainability
 
 
@@ -614,7 +488,8 @@ This improves:
 
 
 
-A React component must return one single root element (use a <div> or Fragment <> </> when needed).
+A React component must return one single root element (use a `<div>` or Fragment `<> </>` when needed).
+
 
 
 
