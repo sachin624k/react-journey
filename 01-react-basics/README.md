@@ -494,8 +494,6 @@ A React component must return one single root element (use a `<div>` or Fragment
 
 
 > React Fundamentals (Part 1) completed successfully!
-<<<<<<< HEAD
-=======
 
 ---
 
@@ -504,6 +502,7 @@ A React component must return one single root element (use a `<div>` or Fragment
 This section builds on the fundamentals by introducing Props, component communication, and real-world component structure.
 
 ## 🧾 12. React Props
+
 
 **Props** are inputs passed to components, just like function arguments.
 They allow components to receive **dynamic data.**
@@ -548,4 +547,4 @@ Because of this, `console.log()` may appear twice, but this does not happen in p
   <App />
 </React.StrictMode>
 ```
->>>>>>> e0f1fdc (React Part - 2 Props)
+
