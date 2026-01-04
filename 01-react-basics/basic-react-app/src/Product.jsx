@@ -1,28 +1,21 @@
-// Part -1 
-// import "./Product.css";
-
-// function Product() {
-//     return (
-//         <div className="Product">
-//             <h3>Product Title</h3>
-//             <p>Product Description</p>
-//         </div>
-//     )
-// }
-
-// export default Product;
-
-// Part - 2
 import "./Product.css";
+import Price from "./Price.jsx";
 
-function Product({ title, price, features }) {
-    let styles = { backgroundColor: price > 800 ? "lightgreen" : "" };
+function Product({ title, idx }) {
+    let oldPrices = ["49,333", "85000", "32,000", "29,999"];
+    let newPrices = ["39,999", "69999", "27,999", "24,999"];
+    let description = [["Best for Rest", "Laptop for all"],
+                       ["Powerful performance", "Gaming Laptop"],
+                        ["Lightweight and portable", "Everyday use"],
+                        ["Affordable and reliable", "Budget Laptop"]
+    ];
 
     return (
-        <div className="Product" style={styles}>
-            <h3>{title}</h3>
-            <p>Price: ${price}</p>
-            {price > 800 && <p>Discount of 5%</p>}
+        <div className="Product" >
+            <h4>{title}</h4>
+            <p>{description[idx][0]}</p>
+            <p>{description[idx][1]}</p>
+            <Price oldPrice={oldPrices[idx]} newPrice={newPrices[idx]}/>
         </div>
     )
 }

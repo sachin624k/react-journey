@@ -683,7 +683,7 @@ React Developer Tools help you inspect components and props directly in the brow
 
 **2.** Install the Chrome Extension
 
-**3.**Open DevTools → Components tab
+**3.** Open DevTools → Components tab
 
 **Benefits**
 
@@ -692,3 +692,20 @@ React Developer Tools help you inspect components and props directly in the brow
 ✔ Inspect props & state
 
 ✔ Debug faster during development
+
+---
+
+## 🧩 19. Activity: Blockbuster Deals UI
+
+In this activity, we built a product cards UI using React concepts like:
+
+- Reusable components
+- Props for dynamic data
+- Rendering arrays with `.map()`
+- Conditional rendering (discounts)
+- Dynamic styling based on price
+
+📌 All related code can be found inside the component files (`Product.jsx` `ProductTab.jsx`, `Product.css`).
+
+### 🖼️ Output Preview
+![Blockbuster Deals UI](./assets/blockbuster-deals.png)
