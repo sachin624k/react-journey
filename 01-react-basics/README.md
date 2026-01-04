@@ -708,4 +708,6 @@ In this activity, we built a product cards UI using React concepts like:
 📌 All related code can be found inside the component files (`Product.jsx` `ProductTab.jsx`, `Product.css`).
 
 ### 🖼️ Output Preview
-![Blockbuster Deals UI](./assets/blockbuster-deals.png)
+![Blockbuster Deals UI](./basic-react-app/src/assets/blockbuster-deals.png)
+
+> 🎉 **React Fundamentals – Part 2 completed successfully!** 
