@@ -554,15 +554,15 @@ Because of this, `console.log()` may appear twice, but this does not happen in p
 
 **Props** can also receive `arrays` and `objects`.
 
-**Method 1: Direct Array**
+### Method 1: Direct Array
 ```jsx
 <Product features={["fast", "reliable"]} />
 ```
-**Method 2: Object as Props**
+### Method 2: Object as Props
 ```jsx
 <Product features={{ a: "fast", b: "reliable" }} />
 ```
-**Method 3: Variable Reference (Recommended)**
+### Method 3: Variable Reference (Recommended)
 ```jsx
 function ProductTab() {
   const options = ["fast", "reliable"];
@@ -580,11 +580,11 @@ function ProductTab() {
 
 Arrays are rendered using `.map()` in JSX.
 
-**Passing Array (Parent Component)**
+### Passing Array (Parent Component)
 ```jsx
 <Product features={options} />
 ```
-**Rendering Array (Child Component)**
+### Rendering Array (Child Component)
 ```jsx
 function Product({ features }) {
   return (
@@ -599,3 +599,96 @@ function Product({ features }) {
 ✔ map() converts array → JSX
 
 ✔ Always use a key when rendering lists
+
+---
+
+## 🔀 15. Conditional Rendering in React
+
+Conditional Rendering means showing or hiding elements based on a condition.
+
+### Method 1: Ternary Operator
+```jsx
+{price >= 1000 ? <p>Discount: 5%</p> : null}
+```
+### Method 2: Logical AND (&&)
+```jsx
+{price >= 1000 && <p>Discount: 5%</p>}
+```
+✔ && is preferred for simple conditions
+
+✔ null means “render nothing”
+
+---
+
+## 🎨 16. Dynamic Component Styling
+
+Styles in React can change dynamically based on props or state.
+
+### Example: Style Based on Price
+```jsx
+function Product({ title, price }) {
+  const styles = {
+    backgroundColor: price > 800 ? "pink" : "white"
+  };
+
+  return (
+    <div className="product" style={styles}>
+      <h3>{title}</h3>
+      <p>Price: ₹{price}</p>
+
+      {price > 800 && <p>Discount: 5%</p>}
+    </div>
+  );
+}
+```
+✔ Inline styles use JavaScript objects
+
+✔ CSS properties use camelCase
+
+✔ Dynamic styling improves UI feedback
+
+---
+
+## 🧪 17. Mini Activity (Practice Task)
+
+### Goal:
+Show a greeting message in different colors.
+
+**Requirements**
+
+Pass two props:
+
+- userName
+- textColor
+
+**Display:**
+ Hello, `<userName>`
+
+### 📁 Implementation Hint:
+**You’ll find this activity inside `MsgBox.jsx`**
+
+✔ Helps practice props
+
+✔ Demonstrates dynamic styling
+
+---
+
+## 🛠️ 18. React Developer Tools
+
+React Developer Tools help you inspect components and props directly in the browser.
+
+### Installation Steps
+
+**1.** Visit: https://react.dev/learn/react-developer-tools
+
+**2.** Install the Chrome Extension
+
+**3.**Open DevTools → Components tab
+
+**Benefits**
+
+✔ View component tree
+
+✔ Inspect props & state
+
+✔ Debug faster during development
