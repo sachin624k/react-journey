@@ -22,6 +22,7 @@
 import './App.css'
 import Title from "./Title.jsx";
 import ProductTab from './ProductTab.jsx';
+import MsgBox from './MsgBox.jsx';
 
 function Description() {
   return <p>This is my first React app!</p>
@@ -29,10 +30,11 @@ function Description() {
 
 function App() {
   return (
-    <div>
+    <>
+      <MsgBox userName="Sachin" textColor="teal" />
       <ProductTab />
-    </div>
-  )
+    </>
+  );
 }
  
 export default App;
