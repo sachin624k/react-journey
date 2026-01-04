@@ -548,3 +548,54 @@ Because of this, `console.log()` may appear twice, but this does not happen in p
 </React.StrictMode>
 ```
 
+---
+
+## 📦 13. Passing Arrays as Props
+
+**Props** can also receive `arrays` and `objects`.
+
+**Method 1: Direct Array**
+```jsx
+<Product features={["fast", "reliable"]} />
+```
+**Method 2: Object as Props**
+```jsx
+<Product features={{ a: "fast", b: "reliable" }} />
+```
+**Method 3: Variable Reference (Recommended)**
+```jsx
+function ProductTab() {
+  const options = ["fast", "reliable"];
+
+  return (
+    <Product title="Phone" price={10000} features={options} />
+  );
+}
+```
+✔ Prefer variables for readability and reuse
+
+---
+
+## 🧩 14. Rendering Arrays in JSX
+
+Arrays are rendered using `.map()` in JSX.
+
+**Passing Array (Parent Component)**
+```jsx
+<Product features={options} />
+```
+**Rendering Array (Child Component)**
+```jsx
+function Product({ features }) {
+  return (
+    <p>
+      {features.map((feature, index) => (
+        <span key={index}>{feature} </span>
+      ))}
+    </p>
+  );
+}
+```
+✔ map() converts array → JSX
+
+✔ Always use a key when rendering lists
