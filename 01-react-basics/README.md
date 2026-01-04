@@ -494,3 +494,58 @@ A React component must return one single root element (use a `<div>` or Fragment
 
 
 > React Fundamentals (Part 1) completed successfully!
+<<<<<<< HEAD
+=======
+
+---
+
+# 🔁 React Fundamentals (Part 2)
+
+This section builds on the fundamentals by introducing Props, component communication, and real-world component structure.
+
+## 🧾 12. React Props
+
+**Props** are inputs passed to components, just like function arguments.
+They allow components to receive **dynamic data.**
+
+**Passing Props** (ProductTab.jsx)
+```jsx
+<Product title="Phone" price={500} />
+```
+**Receiving Props** (Product.jsx)
+```jsx
+function Product({ title, price }) {
+  return (
+    <div className="product">
+      <h3>{title}</h3>
+      <p>₹{price}</p>
+    </div>
+  );
+}
+
+export default Product;
+```
+✔ Props make components reusable
+
+✔ Data flows parent → child
+
+**🔢 Numbers in Props (Important)**
+
+**Note:** In JSX, numbers must be passed using `{}`.
+Values inside quotes are treated as strings.
+```jsx
+<Product price={500} />   // ✅ number
+<Product price="500" />   // ❌ string
+```
+
+**⚠️ StrictMode Note (main.jsx)**
+
+**Note:**
+`<React.StrictMode>` in m`ain.jsx` intentionally renders components twice in development mode to detect side effects.
+Because of this, `console.log()` may appear twice, but this does not happen in production.
+```jsx
+<React.StrictMode>
+  <App />
+</React.StrictMode>
+```
+>>>>>>> e0f1fdc (React Part - 2 Props)
