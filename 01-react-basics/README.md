@@ -716,7 +716,7 @@ In this activity, we built a product cards UI using React concepts like:
 
 # React Fundamentals (Part 3): State, Events & Hooks
 
-## 🖱️ 15. Handling Click Events
+## 🖱️ 20. Handling Click Events
 
 Event handlers are passed as function references, not function calls.
 ```jsx
@@ -734,7 +734,7 @@ function Button() {
 
 ---
 
-## 🖱️ 16. Handling Non-Click Events
+## 🖱️ 21. Handling Non-Click Events
 
 React supports many events like onMouseOver, onDoubleClick, etc.
 ```jsx
@@ -758,7 +758,7 @@ function Button() {
 
 ---
 
-## 🧾 17. Event Object & Forms
+## 🧾 22. Event Object & Forms
 
 React provides an event object to handlers.
 ```jsx
@@ -778,7 +778,5 @@ function Form() {
 ### 🔹 Notes
 
 - By default, `<button>` inside a form acts as submit
-
 - Use `type="button"` to prevent submission
-
 - `event.preventDefault()` stops page reload
