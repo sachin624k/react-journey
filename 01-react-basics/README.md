@@ -711,3 +711,74 @@ In this activity, we built a product cards UI using React concepts like:
 ![Blockbuster Deals UI](./basic-react-app/src/assets/blockbuster-deals.png)
 
 > 🎉 **React Fundamentals – Part 2 completed successfully!** 
+
+---
+
+# React Fundamentals (Part 3): State, Events & Hooks
+
+## 🖱️ 15. Handling Click Events
+
+Event handlers are passed as function references, not function calls.
+```jsx
+function printMessage() {
+  console.log("Button was clicked!");
+}
+
+function Button() {
+  return <button onClick={printMessage}>Click</button>;
+}
+```
+✅ Correct: onClick={printMessage}
+
+❌ Wrong: onClick={printMessage()} (executes immediately)
+
+---
+
+## 🖱️ 16. Handling Non-Click Events
+
+React supports many events like onMouseOver, onDoubleClick, etc.
+```jsx
+function handleHover() {
+  console.log("Hovering mouse");
+}
+
+function Button() {
+  return <button onMouseOver={handleHover}>Hover</button>;
+}
+```
+
+### ⚠️ Important Event Notes
+
+- Never call event handlers directly
+- Always pass the function reference
+```jsx
+<button onDoubleClick={handleDblClick}>Click</button> ✅
+<button onDoubleClick={handleDblClick()}>Click</button> ❌
+```
+
+---
+
+## 🧾 17. Event Object & Forms
+
+React provides an event object to handlers.
+```jsx
+function handleFormSubmit(event) {
+  event.preventDefault();
+  console.log("Form submitted");
+}
+
+function Form() {
+  return (
+    <form onSubmit={handleFormSubmit}>
+      <button>Submit</button>
+    </form>
+  );
+}
+```
+### 🔹 Notes
+
+- By default, `<button>` inside a form acts as submit
+
+- Use `type="button"` to prevent submission
+
+- `event.preventDefault()` stops page reload
