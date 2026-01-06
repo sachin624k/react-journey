@@ -78,10 +78,10 @@ const [state, setState] = useState(initialState);
 
 `useState` returns an array with exactly two values:
 
-**1.**Current state value
+**1.** Current state value
 - On the first render, it equals the initialState
 
-**2.**Setter function
+**2.** Setter function
 - Used to update the state
 - Triggers a re-render of the component
 
