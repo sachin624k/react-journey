@@ -105,3 +105,19 @@ export default function Counter() {
   );
 }
 ```
+
+### ❤️ Activity: Create Like Button
+
+In this activity, we built an interactive Like Button using React state.
+
+## 🪝 useState Hook
+
+`useState` is a React Hook that lets you add a state variable to your component.
+When the state changes, React re-renders the UI automatically.
+
+📂 File Location
+- src/LikeButton.jsx
+> You’ll find the complete implementation of this activity in the file above.
+
+## 🖼️ Output Preview
+![Like Button](./src/assets/LikeButtonActivity.png)
