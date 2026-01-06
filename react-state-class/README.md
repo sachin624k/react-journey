@@ -64,3 +64,44 @@ They allow you to:
 - Use state
 - Use other React features
 - Without writing class components
+
+
+### 🔹 useState() Hook
+
+useState is a React Hook that lets you add a state variable to a functional component.
+
+**Basic Syntax**
+```jsx
+const [state, setState] = useState(initialState);
+```
+**What `useState` Returns**
+
+`useState` returns an array with exactly two values:
+
+**1.**Current state value
+- On the first render, it equals the initialState
+
+**2.**Setter function
+- Used to update the state
+- Triggers a re-render of the component
+
+### 📌 Example: Counter using useState
+`Counter.jsx`
+```jsx
+import { useState } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  const incCount = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <h3>Count = {count}</h3>
+      <button onClick={incCount}>Increase</button>
+    </div>
+  );
+}
+```
