@@ -780,3 +780,5 @@ function Form() {
 - By default, `<button>` inside a form acts as submit
 - Use `type="button"` to prevent submission
 - `event.preventDefault()` stops page reload
+
+> `DeltaReact/react-journey/react-state-class/README.md` This README is **ONLY About State**
