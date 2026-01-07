@@ -66,3 +66,9 @@ let updateBlue = () => {
   });
 };
 ```
+> You can find the **Ludo Board implementation code** here:
+```jsx
+src/LudoBoard.jsx
+```
+**🖼️ Reference Image**
+![Ludo Board ](./src/assets/LudoBoard.png)
