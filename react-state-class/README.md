@@ -25,7 +25,7 @@ function increment() {
 
 ### ✅ What is State in React?
 
-State is a built-in React object that:
+**State** is a built-in React object that:
 
 - Stores component data
 - Triggers re-render when updated
@@ -68,7 +68,7 @@ They allow you to:
 
 ### 🔹 useState() Hook
 
-useState is a React Hook that lets you add a state variable to a functional component.
+`useState` is a React Hook that lets you add a state variable to a functional component.
 
 **Basic Syntax**
 ```jsx
@@ -110,7 +110,7 @@ export default function Counter() {
 
 In this activity, we built an interactive Like Button using React state.
 
-## 🪝 useState Hook
+**🪝 useState Hook**
 
 `useState` is a React Hook that lets you add a state variable to your component.
 When the state changes, React re-renders the UI automatically.
@@ -119,5 +119,145 @@ When the state changes, React re-renders the UI automatically.
 - src/LikeButton.jsx
 > You’ll find the complete implementation of this activity in the file above.
 
-## 🖼️ Output Preview
+**🖼️ Output Preview**
 ![Like Button](./src/assets/LikeButtonActivity.png)
+
+### What is a Closure?
+
+A **closure** is a feature in JavaScript where an inner function has access to variables of its outer (enclosing) function, even after the outer function has finished execution.
+
+**Key Point**
+
+In JavaScript, once a function completes execution, its local variables do not get destroyed if they are still being referenced by an inner function.
+
+**Example**
+```jsx
+function outer() {
+  let b = 10;
+
+  function inner() {
+    let a = 20;
+    console.log(a + b);
+  }
+
+  return inner;
+}
+
+const fn = outer();
+fn(); // 30
+```
+✔️ Here, `inner()` can access `b` even after `outer()` has finished — this is closure.
+
+### 📌 React Re-render: How It Works
+Important Rule
+
+A React component **re-renders only when its state (or props) change**.
+```mermaid
+flowchart TD
+  A[State Change] --> B[Component Re-renders]
+```
+If there is **no change in state**, React will **not re-render** the component.
+
+### Re-render Example Using useState
+```jsx
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  console.log("Component re-executed");
+  console.log("Count:", count);
+
+  const incCount = () => {
+    setCount(count + 1);
+    console.log("New count value:", count);
+  };
+
+  return (
+    <div>
+      <p>Count = {count}</p>
+      <button onClick={incCount}>Count</button>
+    </div>
+  );
+}
+```
+**Explanation**
+
+- Every time setCount updates the state
+- The component function executes again
+- UI updates with the new state value
+
+### 📌 Callback in State Updater Function
+When to Use **Callback**?
+
+When the **new state depends on the previous state**, always use the callback form of `setState`.
+
+**❌ Wrong Way**
+```jsx
+setCount(count + 1);
+```
+**✅ Correct Way (Callback)**
+```jsx
+setCount((currCount) => {
+  return currCount + 1;
+});
+```
+**Example: Multiple Updates**
+```jsx
+const incCount = () => {
+  setCount((currCount) => currCount + 1);
+  setCount((currCount) => currCount + 1);
+};
+```
+✔️ This correctly increments count by **2**.
+
+### ✨ Important Note on Re-rendering
+
+- A React component re-renders only when the state value actually changes
+- Setting the same value again will not trigger re-render
+
+**Example**
+```jsx
+setCount(25);
+```
+If `count` is already `25`, React will **not re-render**.
+
+### 🥸 Lazy Initialization in useState
+**Rule**
+
+When passing a function as the initial value to `useState`, do not call the function.
+
+**❌ Wrong**
+```js
+useState(init());
+```
+➡️ Executes immediately on every render.
+
+**✅ Right**
+```js
+useState(init);
+```
+➡️ React calls it only on the first render.
+
+**Example**
+```jsx
+function init() {
+  console.log("init was executed");
+  return Math.random();
+}
+
+export default function Counter() {
+  const [count, setCount] = useState(init);
+
+  console.log("Component was rendered");
+
+  const incCount = () => {
+    setCount((currCount) => currCount + 1);
+  };
+
+  return <button onClick={incCount}>+</button>;
+}
+```
+**Benefit**
+
+- Called only once
+- Improves performance
+- Known as lazy initialization
