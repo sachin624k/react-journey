@@ -261,3 +261,5 @@ export default function Counter() {
 - Called only once
 - Improves performance
 - Known as lazy initialization
+
+> In React-State-Class2, we’re going to cover managing React state with objects and arrays by building and enhancing a Todo app with real-world update, delete, and “mark as done” features.
