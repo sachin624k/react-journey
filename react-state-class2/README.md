@@ -71,4 +71,10 @@ let updateBlue = () => {
 src/LudoBoard.jsx
 ```
 **🖼️ Reference Image**
-![Ludo Board ](./src/assets/LudoBoard.png)
+
+<img 
+  src="./src/assets/LudoBoard.png" 
+  alt="Ludo Board"
+  width="250"
+  height="430"
+/>
