@@ -85,9 +85,10 @@ src/LudoBoard.jsx
 src/TodoList.jsx
 ```
 **🖼️ Reference Image**
+
 <img 
   src="./src/assets/Todo.png" 
   alt="Ludo Board"
-  width="650"
-  height="430"
+  width="1000"
+  height="630"
 />
