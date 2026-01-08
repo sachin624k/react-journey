@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 export default function LudoBoard() {
     let [moves, setMoves] = useState({ blue: 0, yellow: 0, green: 0, red: 0 });
+    //ek hi sath 4 players ke single object aa gai i.e, moves
 
     let updateBlue = () => {
         // console.log(`moves.blue = ${moves.blue}`);

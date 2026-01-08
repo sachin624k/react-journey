@@ -78,3 +78,16 @@ src/LudoBoard.jsx
   width="250"
   height="430"
 />
+
+### Activity: Create a Todo
+> You can find the **Todo implementation code** here:
+```jsx
+src/TodoList.jsx
+```
+**🖼️ Reference Image**
+<img 
+  src="./src/assets/Todo.png" 
+  alt="Ludo Board"
+  width="650"
+  height="430"
+/>
