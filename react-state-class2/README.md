@@ -92,3 +92,88 @@ src/TodoList.jsx
   width="1000"
   height="630"
 />
+
+---
+
+### 🎯 Component Design & Architecture
+
+The notes include breakdowns of:
+- **Logical Components** (smart)
+- **Presentational Components** (dumb)
+- Functional Components
+- Component Props
+- Component State
+- Component Events
+
+### Component Breakdown Example
+- `App`
+- `Lottery` Component
+- `Ticket` Component
+- `TicketNum` Component
+
+With properties like:
+- Props: `ticket`, `num`, `winningSum`
+- State: arrays such as `ticket[]`
+- Events: `buyTicket()`
+
+---
+
+### 🎲 Lottery Example (Custom React Implementation)
+
+A mini project exploring:
+- generating random lottery tickets
+- checking winning conditions
+- lifting and sharing state between components
+- using props for data flow
+- passing functions as props (first-class JavaScript functions)
+- rendering structured UI from arrays
+
+---
+
+### ⚙️ useEffect & Hooks Usage
+Concepts practiced:
+- When useEffect runs
+- Dependency arrays
+- Re-rendering behavior
+- Real use cases
+
+---
+
+### 📋 Handling Arrays & Lists
+
+Topics practiced (from lessons):
+- Unique keys for list items
+- Adding to an array
+- Deleting from an array
+- Updating one element in an array
+- Updating all elements in array
+- Marking items as completed (Todo Example)
+
+---
+
+### 🧾 Todo Project (Hands-on Practice)
+
+The Todo implementation covers:
+✔ Rendering a dynamic list  
+✔ Adding & deleting tasks  
+✔ Updating task status  
+✔ Using arrays & immutability concepts  
+✔ Connecting UI, logic & state  
+
+### 📚 Props & Functions Understanding
+
+Notes also cover:
+- Passing data using props
+- Passing functions as props
+- First-class function behavior in JavaScript
+
+### 🧱 Folder / File Structure (Summary)
+
+All the relevant code and experiments can be found across files such as:
+- `Lottery.jsx`
+- `Lottery.css`
+- `Ticket.jsx`
+- `Ticket.css`
+- `TicketNum.jsx`
+- `TicketNum.css`
+- `TodoList.jsx`
